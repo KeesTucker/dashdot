@@ -67,10 +67,8 @@ const findIntelArcDrmCards = (): string[] => {
           // sysPath = .../drm/cardN — go up two levels to reach PCI device dir
           const devicePath = path.resolve(sysPath, '../..');
           const vendor = readFileSync(`${devicePath}/vendor`, 'utf8').trim();
-          // 0x030200 = PCI 3D controller (discrete GPU); iGPUs are 0x030000 (VGA)
-          const pciClass = readFileSync(`${devicePath}/class`, 'utf8').trim();
-          console.log(`[GPU] ${e}: vendor=${vendor}, class=${pciClass}`);
-          return vendor === '0x8086' && pciClass === '0x030200';
+          console.log(`[GPU] ${e}: vendor=${vendor}`);
+          return vendor === '0x8086';
         } catch (err) {
           console.warn(`[GPU] Failed to inspect /dev/dri/${e}:`, err);
           return false;
