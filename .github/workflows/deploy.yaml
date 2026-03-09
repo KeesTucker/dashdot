@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build_arc:
+  build_intel:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,7 +23,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - uses: docker/metadata-action@v5
-        id: meta_arc
+        id: meta_intel
         with:
           flavor: |
             latest=false
@@ -37,19 +37,19 @@ jobs:
             org.opencontainers.image.source=https://github.com/KeesTucker/dashdot
             org.opencontainers.image.licenses=MIT
           tags: |
-            type=raw,value=arc,enable=${{ github.ref_name == 'main' }}
-            type=ref,event=branch,enable=${{ github.ref_name != 'main' }},prefix=arc-
+            type=raw,value=intel,enable=${{ github.ref_name == 'main' }}
+            type=ref,event=branch,enable=${{ github.ref_name != 'main' }},prefix=intel-
       - uses: docker/build-push-action@v6
         with:
           context: .
-          file: docker/Dockerfile.arc
+          file: docker/Dockerfile.intel
           platforms: linux/amd64
           target: prod
           push: true
           build-args: |
             VERSION=0.0.0-${{ github.ref_name }}
             BUILDHASH=${{ github.sha }}
-          labels: ${{ steps.meta_arc.outputs.labels }}
-          tags: ${{ steps.meta_arc.outputs.tags }}
+          labels: ${{ steps.meta_intel.outputs.labels }}
+          tags: ${{ steps.meta_intel.outputs.tags }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
