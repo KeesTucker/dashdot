@@ -29,9 +29,17 @@ export const capFirst = (str: string) => {
   return str[0]?.toUpperCase() + str.slice(1);
 };
 
+const stripSlashes = (part: string) => {
+  let start = 0;
+  let end = part.length;
+  while (start < end && part[start] === '/') start++;
+  while (end > start && part[end - 1] === '/') end--;
+  return part.slice(start, end);
+};
+
 export const urlJoin = (...parts: string[]) => {
   return parts
-    .map((part) => part.replace(/^\/+|\/+$/g, '')) // Remove leading/trailing slashes
+    .map(stripSlashes)
     .filter((part) => part.length > 0) // Remove empty parts
     .join('/');
 };
