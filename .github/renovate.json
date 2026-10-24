@@ -1,17 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base", ":disableDependencyDashboard"],
-  "baseBranches": ["dev"],
-  "commitMessage": "{{{commitMessagePrefix}}} {{{commitMessageAction}}} {{{commitMessageTopic}}} {{{commitMessageExtra}}} {{{commitMessageSuffix}}}",
-  "commitMessagePrefix": "chore(deps):",
-  "commitMessageAction": "upgrade",
-  "commitMessageTopic": "{{depName}}",
-  "packageRules": [
-    {
-      "matchUpdateTypes": ["patch", "pin", "digest"],
-      "automerge": true,
-      "automergeType": "pr",
-      "automergeStrategy": "squash"
-    }
+  "extends": [
+    "github>KeesTucker/renovate-config"
   ]
 }
