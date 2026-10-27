@@ -43,7 +43,7 @@ jobs:
           tags: |
             type=raw,value=intel,enable=${{ github.ref_name == 'main' }}
             type=ref,event=branch,enable=${{ github.ref_name != 'main' }},prefix=intel-
-      - uses: docker/build-push-action@v6
+      - uses: docker/build-push-action@v7
         with:
           context: .
           file: docker/Dockerfile.intel
