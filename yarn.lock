@@ -1526,9 +1526,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@dashdot/docs@workspace:apps/docs"
   dependencies:
-    "@orama/orama": "npm:^3.1.18"
     "@tailwindcss/postcss": "npm:^4.1.18"
-    "@takumi-rs/image-response": "npm:^0.73.0"
     "@types/gh-pages": "npm:^6"
     "@types/mdx": "npm:^2.0.13"
     "@types/node": "npm:^25.2.3"
@@ -1552,8 +1550,10 @@ __metadata:
     shadcn: "npm:3.8.5"
     tailwind-merge: "npm:3.7.0"
     tailwindcss: "npm:^4.1.18"
+    takumi-js: "npm:2.17.1"
     tw-animate-css: "npm:1.4.0"
     typescript: "npm:^5.9.3"
+    zbsearch: "npm:4.0.1"
     zod: "npm:4.6.7"
   languageName: unknown
   linkType: soft
@@ -4229,13 +4229,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@orama/orama@npm:^3.1.18":
-  version: 3.1.18
-  resolution: "@orama/orama@npm:3.1.18"
-  checksum: 10/86bc4ef4864b22d2bbec387f59fc54de66e7c941d4846a4f5d660af2445ca0f6c6ce749b496773eded90194034a2382e448cfa1f5d6826c180d71073c413d37f
-  languageName: node
-  linkType: hard
-
 "@oxc-project/types@npm:=0.155.0":
   version: 0.155.0
   resolution: "@oxc-project/types@npm:0.155.0"
@@ -6641,75 +6634,77 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@takumi-rs/core-darwin-arm64@npm:0.73.1":
-  version: 0.73.1
-  resolution: "@takumi-rs/core-darwin-arm64@npm:0.73.1"
+"@takumi-rs/core-darwin-arm64@npm:2.17.1":
+  version: 2.17.1
+  resolution: "@takumi-rs/core-darwin-arm64@npm:2.17.1"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@takumi-rs/core-darwin-x64@npm:0.73.1":
-  version: 0.73.1
-  resolution: "@takumi-rs/core-darwin-x64@npm:0.73.1"
+"@takumi-rs/core-darwin-x64@npm:2.17.1":
+  version: 2.17.1
+  resolution: "@takumi-rs/core-darwin-x64@npm:2.17.1"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@takumi-rs/core-linux-arm64-gnu@npm:0.73.1":
-  version: 0.73.1
-  resolution: "@takumi-rs/core-linux-arm64-gnu@npm:0.73.1"
+"@takumi-rs/core-linux-arm64-gnu@npm:2.17.1":
+  version: 2.17.1
+  resolution: "@takumi-rs/core-linux-arm64-gnu@npm:2.17.1"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@takumi-rs/core-linux-arm64-musl@npm:0.73.1":
-  version: 0.73.1
-  resolution: "@takumi-rs/core-linux-arm64-musl@npm:0.73.1"
+"@takumi-rs/core-linux-arm64-musl@npm:2.17.1":
+  version: 2.17.1
+  resolution: "@takumi-rs/core-linux-arm64-musl@npm:2.17.1"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@takumi-rs/core-linux-x64-gnu@npm:0.73.1":
-  version: 0.73.1
-  resolution: "@takumi-rs/core-linux-x64-gnu@npm:0.73.1"
+"@takumi-rs/core-linux-x64-gnu@npm:2.17.1":
+  version: 2.17.1
+  resolution: "@takumi-rs/core-linux-x64-gnu@npm:2.17.1"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@takumi-rs/core-linux-x64-musl@npm:0.73.1":
-  version: 0.73.1
-  resolution: "@takumi-rs/core-linux-x64-musl@npm:0.73.1"
+"@takumi-rs/core-linux-x64-musl@npm:2.17.1":
+  version: 2.17.1
+  resolution: "@takumi-rs/core-linux-x64-musl@npm:2.17.1"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@takumi-rs/core-win32-arm64-msvc@npm:0.73.1":
-  version: 0.73.1
-  resolution: "@takumi-rs/core-win32-arm64-msvc@npm:0.73.1"
+"@takumi-rs/core-win32-arm64-msvc@npm:2.17.1":
+  version: 2.17.1
+  resolution: "@takumi-rs/core-win32-arm64-msvc@npm:2.17.1"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@takumi-rs/core-win32-x64-msvc@npm:0.73.1":
-  version: 0.73.1
-  resolution: "@takumi-rs/core-win32-x64-msvc@npm:0.73.1"
+"@takumi-rs/core-win32-x64-msvc@npm:2.17.1":
+  version: 2.17.1
+  resolution: "@takumi-rs/core-win32-x64-msvc@npm:2.17.1"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@takumi-rs/core@npm:0.73.1":
-  version: 0.73.1
-  resolution: "@takumi-rs/core@npm:0.73.1"
+"@takumi-rs/core@npm:2.17.1":
+  version: 2.17.1
+  resolution: "@takumi-rs/core@npm:2.17.1"
   dependencies:
-    "@takumi-rs/core-darwin-arm64": "npm:0.73.1"
-    "@takumi-rs/core-darwin-x64": "npm:0.73.1"
-    "@takumi-rs/core-linux-arm64-gnu": "npm:0.73.1"
-    "@takumi-rs/core-linux-arm64-musl": "npm:0.73.1"
-    "@takumi-rs/core-linux-x64-gnu": "npm:0.73.1"
-    "@takumi-rs/core-linux-x64-musl": "npm:0.73.1"
-    "@takumi-rs/core-win32-arm64-msvc": "npm:0.73.1"
-    "@takumi-rs/core-win32-x64-msvc": "npm:0.73.1"
-    "@takumi-rs/helpers": "npm:0.73.1"
+    "@takumi-rs/core-darwin-arm64": "npm:2.17.1"
+    "@takumi-rs/core-darwin-x64": "npm:2.17.1"
+    "@takumi-rs/core-linux-arm64-gnu": "npm:2.17.1"
+    "@takumi-rs/core-linux-arm64-musl": "npm:2.17.1"
+    "@takumi-rs/core-linux-x64-gnu": "npm:2.17.1"
+    "@takumi-rs/core-linux-x64-musl": "npm:2.17.1"
+    "@takumi-rs/core-win32-arm64-msvc": "npm:2.17.1"
+    "@takumi-rs/core-win32-x64-msvc": "npm:2.17.1"
+    "@takumi-rs/helpers": "npm:2.17.1"
+  peerDependencies:
+    csstype: "*"
   dependenciesMeta:
     "@takumi-rs/core-darwin-arm64":
       optional: true
@@ -6727,34 +6722,39 @@ __metadata:
       optional: true
     "@takumi-rs/core-win32-x64-msvc":
       optional: true
-  checksum: 10/e013efec72ec8384df30dc0d039faeabe6df84c85b5c1713f35b7ad7c123352f89bb1fc5ae76d5a19ead9e811ad0864713cc414e65e5c01fadcb6520e9423508
+  peerDependenciesMeta:
+    csstype:
+      optional: true
+  checksum: 10/495d6753fe3e2f463448695ce30516c361b4c15644d3fd59deef3f2cdd13bb789609cddcd04df58c5b0cc30d3eb524bfbe056928b38dce6c590aab09472dd6f5
   languageName: node
   linkType: hard
 
-"@takumi-rs/helpers@npm:0.73.1":
-  version: 0.73.1
-  resolution: "@takumi-rs/helpers@npm:0.73.1"
-  checksum: 10/6b45c030c12f6543a2ab046cf9e4c13b85593eb1f767154a53fc1855771ccb242bfd711c73ffca1f5d9c76b9c1b686043af4990ff98851275a4711e48473a5d7
+"@takumi-rs/helpers@npm:2.17.1":
+  version: 2.17.1
+  resolution: "@takumi-rs/helpers@npm:2.17.1"
+  peerDependencies:
+    preact: ^10.0.0 || ^11.0.0
+    react: ^18.0.0 || ^19.0.0
+  peerDependenciesMeta:
+    preact:
+      optional: true
+    react:
+      optional: true
+  checksum: 10/15e866d2e9b000f561299e4962762fd77d84a7180baf7c969a7db2aa53b6f244ae5dab8aa21ebc361323bbedbc22424733bc8409aee300c94e0f11140258ad73
   languageName: node
   linkType: hard
 
-"@takumi-rs/image-response@npm:^0.73.0":
-  version: 0.73.1
-  resolution: "@takumi-rs/image-response@npm:0.73.1"
+"@takumi-rs/wasm@npm:2.17.1":
+  version: 2.17.1
+  resolution: "@takumi-rs/wasm@npm:2.17.1"
   dependencies:
-    "@takumi-rs/core": "npm:0.73.1"
-    "@takumi-rs/helpers": "npm:0.73.1"
-    "@takumi-rs/wasm": "npm:0.73.1"
-  checksum: 10/43801e696b945ec1cab5466101f11d0142d704e8e7e613efa981f4f202e96bd0a484da9006512d16938c93cdb30745451dbe7f4aa77795cb29da22e39fece148
-  languageName: node
-  linkType: hard
-
-"@takumi-rs/wasm@npm:0.73.1":
-  version: 0.73.1
-  resolution: "@takumi-rs/wasm@npm:0.73.1"
-  dependencies:
-    "@takumi-rs/helpers": "npm:0.73.1"
-  checksum: 10/e14c931ee4249e37db5e0cc1c3994e89daa7fb665bb9e46dd28482b185dd8f48a77b99129701bdf9dec54a421d2d63f326a96038bd0691d9815e95b6831b59aa
+    "@takumi-rs/helpers": "npm:2.17.1"
+  peerDependencies:
+    csstype: "*"
+  peerDependenciesMeta:
+    csstype:
+      optional: true
+  checksum: 10/a59e2435234f8e792631dafade2a3062651596ab1afb9e352490b01112cc016f6fa8ba6e2bd3773fa2f27f03d250c4b44d98963621716f6fecf44e498ff09a89
   languageName: node
   linkType: hard
 
@@ -21240,6 +21240,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"takumi-js@npm:2.17.1":
+  version: 2.17.1
+  resolution: "takumi-js@npm:2.17.1"
+  dependencies:
+    "@takumi-rs/core": "npm:2.17.1"
+    "@takumi-rs/helpers": "npm:2.17.1"
+    "@takumi-rs/wasm": "npm:2.17.1"
+  checksum: 10/ceb5cc8e68853f01ec7829b897b572ddb97f6aa16afcc3109b8d640788111d356bc293aaad5d58030e17a9347c1dc09af09b8a224376e3e44bcd21fc31a72714
+  languageName: node
+  linkType: hard
+
 "tapable@npm:^2.3.3":
   version: 2.3.3
   resolution: "tapable@npm:2.3.3"
@@ -22971,7 +22982,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zbsearch@npm:^4.0.1":
+"zbsearch@npm:4.0.1, zbsearch@npm:^4.0.1":
   version: 4.0.1
   resolution: "zbsearch@npm:4.0.1"
   checksum: 10/9ecc4d363964a8acd9a197235dd24646ccd7f58a54a6ceedff6b0643eee680aafc0860ddd36681bf93ab160ca2fe8bf4546de08686dfa3c9f3ae83949d83f4b2

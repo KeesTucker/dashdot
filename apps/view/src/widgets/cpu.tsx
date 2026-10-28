@@ -166,9 +166,7 @@ export const CpuChart: FC<CpuChartProps> = ({
               height={size.height}
               width={size.width}
               color={theme.colors.cpuPrimary}
-              renderTooltip={(val) =>
-                `${val.payload?.[0]?.value?.toFixed(1)} %`
-              }
+              renderTooltip={(value) => `${value?.toFixed(1)} %`}
             >
               <YAxis hide={true} type="number" domain={[-5, 105]} />
             </DefaultAreaChart>

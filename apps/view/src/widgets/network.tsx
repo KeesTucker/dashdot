@@ -77,9 +77,7 @@ export const NetworkChart: FC<NetworkChartProps> = ({
           height={size.height}
           width={size.width}
           color={theme.colors.networkPrimary}
-          renderTooltip={(val) =>
-            bpsPrettyPrint((val.payload?.[0]?.value ?? 0) * 8, asBytes)
-          }
+          renderTooltip={(value) => bpsPrettyPrint((value ?? 0) * 8, asBytes)}
         >
           <YAxis
             hide={true}
@@ -110,9 +108,7 @@ export const NetworkChart: FC<NetworkChartProps> = ({
           height={size.height}
           width={size.width}
           color={theme.colors.networkPrimary}
-          renderTooltip={(val) =>
-            bpsPrettyPrint((val.payload?.[0]?.value ?? 0) * 8, asBytes)
-          }
+          renderTooltip={(value) => bpsPrettyPrint((value ?? 0) * 8, asBytes)}
         >
           <YAxis
             hide={true}

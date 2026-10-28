@@ -62,7 +62,9 @@ export const GpuChart: FC<GpuChartProps> = ({
       ? [featuredName, ...engineNames.filter((n) => n !== featuredName)]
       : engineNames;
 
-    const gridProps = ENGINE_GRID_LAYOUTS[engineNames.length] ?? { gridTemplateColumns: `repeat(${engineNames.length}, 1fr)` };
+    const gridProps = ENGINE_GRID_LAYOUTS[engineNames.length] ?? {
+      gridTemplateColumns: `repeat(${engineNames.length}, 1fr)`,
+    };
 
     const engineCharts = sortedNames.map((name, idx) => {
       const isFeatured = idx === 0 && featuredName !== null;
@@ -88,9 +90,7 @@ export const GpuChart: FC<GpuChartProps> = ({
               height={size.height}
               width={size.width}
               color={theme.colors.gpuPrimary}
-              renderTooltip={(val) =>
-                `${val.payload?.[0]?.value?.toFixed(1)} %`
-              }
+              renderTooltip={(value) => `${value?.toFixed(1)} %`}
             >
               <YAxis hide={true} type="number" domain={[-5, 105]} />
             </DefaultAreaChart>
@@ -100,7 +100,8 @@ export const GpuChart: FC<GpuChartProps> = ({
     });
 
     if (filter) {
-      const primaryChart = engineCharts[sortedNames.indexOf(featuredName ?? sortedNames[0])];
+      const primaryChart =
+        engineCharts[sortedNames.indexOf(featuredName ?? sortedNames[0])];
       return (
         <MultiChartContainer columns={1}>{primaryChart}</MultiChartContainer>
       );
@@ -136,7 +137,7 @@ export const GpuChart: FC<GpuChartProps> = ({
           height={size.height}
           width={size.width}
           color={theme.colors.gpuPrimary}
-          renderTooltip={(val) => `${val.payload?.[0]?.value?.toFixed(1)} %`}
+          renderTooltip={(value) => `${value?.toFixed(1)} %`}
         >
           <YAxis hide={true} type="number" domain={[-5, 105]} />
         </DefaultAreaChart>
@@ -158,7 +159,7 @@ export const GpuChart: FC<GpuChartProps> = ({
           height={size.height}
           width={size.width}
           color={theme.colors.gpuPrimary}
-          renderTooltip={(val) => `${val.payload?.[0]?.value?.toFixed(1)} %`}
+          renderTooltip={(value) => `${value?.toFixed(1)} %`}
         >
           <YAxis hide={true} type="number" domain={[-5, 105]} />
         </DefaultAreaChart>
