@@ -25,3 +25,20 @@ jobs:
       - run: yarn --immutable
       - run: yarn test
       - run: yarn build
+
+  smoke:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+      - uses: docker/setup-buildx-action@v4
+      - uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: docker/Dockerfile.intel
+          platforms: linux/amd64
+          target: prod
+          load: true
+          tags: dashdot:smoke
+          cache-from: type=gha
+      - run: docker/smoke-test.sh dashdot:smoke
