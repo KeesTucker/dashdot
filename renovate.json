@@ -3,5 +3,12 @@
   "extends": [
     "github>KeesTucker/renovate-config"
   ],
-  "forkProcessing": "enabled"
+  "forkProcessing": "enabled",
+  "packageRules": [
+    {
+      "description": "TS 7 drops the JS compiler API that ts-jest and Next need",
+      "matchPackageNames": ["typescript"],
+      "allowedVersions": "<7"
+    }
+  ]
 }
