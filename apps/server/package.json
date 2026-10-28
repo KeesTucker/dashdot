@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"yarn build:watch\" \"nodemon dist/index.cjs\"",
-    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.cjs --sourcemap",
+    "dev": "concurrently \"yarn build:watch\" \"nodemon dist/index.mjs\"",
+    "build": "esbuild src/index.ts --bundle --platform=node --format=esm --outfile=dist/index.mjs --sourcemap --banner:js=\"import { createRequire as __esmCreateRequire } from 'node:module'; import { fileURLToPath as __esmFileURLToPath } from 'node:url'; import { dirname as __esmDirname } from 'node:path'; const require = __esmCreateRequire(import.meta.url); const __filename = __esmFileURLToPath(import.meta.url); const __dirname = __esmDirname(__filename);\"",
     "build:watch": "yarn build --watch",
-    "start": "node dist/index.cjs",
+    "start": "node dist/index.mjs",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "dependencies": {

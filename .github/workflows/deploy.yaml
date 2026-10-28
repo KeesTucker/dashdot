@@ -49,6 +49,21 @@ jobs:
           file: docker/Dockerfile.intel
           platforms: linux/amd64
           target: prod
+          load: true
+          tags: dashdot:smoke
+          build-args: |
+            VERSION=0.0.0-${{ github.ref_name }}
+            BUILDHASH=${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+      - run: docker/smoke-test.sh dashdot:smoke
+      # Same inputs as the smoke build, so this rebuild comes from cache.
+      - uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: docker/Dockerfile.intel
+          platforms: linux/amd64
+          target: prod
           push: true
           build-args: |
             VERSION=0.0.0-${{ github.ref_name }}

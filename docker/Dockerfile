@@ -91,4 +91,4 @@ COPY --from=build /app/dist/package.json package.json
 
 RUN yarn
 
-CMD ["node", "server/dist/index.cjs"]
+CMD ["node", "server/dist/index.mjs"]
