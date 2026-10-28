@@ -26,9 +26,7 @@ type DefaultAreaChartProps = {
   color: string;
   children: React.ReactNode;
   data: ChartVal[];
-  renderTooltip?: (
-    point: TooltipContentProps<number, string>,
-  ) => React.ReactNode;
+  renderTooltip?: (value: number | undefined) => React.ReactNode;
 };
 
 export const DefaultAreaChart: FC<DefaultAreaChartProps> = ({
@@ -62,8 +60,13 @@ export const DefaultAreaChart: FC<DefaultAreaChartProps> = ({
         isAnimationActive={false}
       />
       {renderTooltip && (
-        <Tooltip<number, string>
-          content={(x) => <ThemedText>{renderTooltip(x)}</ThemedText>}
+        <Tooltip
+          // The payload is untyped since recharts 3.10, but area charts only plot numbers.
+          content={(x) => (
+            <ThemedText>
+              {renderTooltip(x.payload?.[0]?.value as number | undefined)}
+            </ThemedText>
+          )}
           wrapperStyle={{ outline: 'none' }}
         />
       )}
@@ -205,7 +208,7 @@ export const DefaultPieChart: FC<DefaultPieChartProps> = ({
             const rect = (
               document.querySelector(`#${id}`) as HTMLElement
             ).getBoundingClientRect();
-            const label = data.name;
+            const label = data.name ?? '';
             const value = data.value;
 
             throttledSetLabel({

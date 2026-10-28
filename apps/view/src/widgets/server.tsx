@@ -169,7 +169,7 @@ export const ServerWidget: FC<ServerWidgetProps> = ({ data, config }) => {
   useEffect(() => {
     const uptime = data.uptime ?? 0;
 
-    let interval: NodeJS.Timeout;
+    let interval: ReturnType<typeof setInterval>;
     if (uptime > 0) {
       const startTime = Date.now();
 

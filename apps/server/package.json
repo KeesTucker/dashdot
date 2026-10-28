@@ -15,14 +15,14 @@
     "@dashdot/typescript-config": "*",
     "compression": "1.8.2",
     "cors": "2.8.6",
-    "cronstrue": "3.13.0",
-    "dedent": "1.7.1",
-    "express": "5.2.1",
+    "cronstrue": "3.38.0",
+    "dedent": "1.7.2",
+    "express": "5.3.0",
     "mime-types": "3.0.2",
-    "node-cron": "4.2.1",
+    "node-cron": "4.6.0",
     "rxjs": "7.8.2",
-    "socket.io": "4.8.3",
-    "systeminformation": "5.33.1"
+    "socket.io": "4.8.4",
+    "systeminformation": "5.33.16"
   },
   "devDependencies": {
     "@types/chai": "5.2.3",
@@ -31,13 +31,13 @@
     "@types/express": "^5",
     "@types/jest": "30.0.0",
     "@types/mime-types": "^3",
-    "@types/node": "25.3.2",
-    "chai": "6.2.2",
+    "@types/node": "25.9.9",
+    "chai": "6.3.0",
     "concurrently": "10.0.6",
     "esbuild": "0.28.2",
-    "jest": "30.2.0",
+    "jest": "30.5.2",
     "nodemon": "3.1.14",
-    "ts-jest": "29.4.6",
+    "ts-jest": "29.4.15",
     "ts-node": "10.9.2",
     "typescript": "5.9.3"
   }
