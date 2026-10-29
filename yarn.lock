@@ -1620,7 +1620,7 @@ __metadata:
     "@vitejs/plugin-react": "npm:^6.0.0"
     antd: "npm:5.29.3"
     globals: "npm:^17.0.0"
-    motion: "npm:12.43.0"
+    motion: "npm:14.6.0"
     parse-domain: "npm:8.4.0"
     punycode: "npm:2.3.1"
     qs: "npm:6.16.1"
@@ -11485,6 +11485,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"framer-motion@npm:14.6.0":
+  version: 14.6.0
+  resolution: "framer-motion@npm:14.6.0"
+  dependencies:
+    motion-dom: "npm:14.6.0"
+    motion-utils: "npm:14.6.0"
+    tslib: "npm:^2.4.0"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 10/f67f1ffaae845eb7e66d916e0a61175cb65e539bc981c04484bea80eb317fd292c70b4f36ae77aab8887d2e56984562a46fc4e5da133cb182fec64eb57d47d7a
+  languageName: node
+  linkType: hard
+
 "framer-motion@npm:14.7.1":
   version: 14.7.1
   resolution: "framer-motion@npm:14.7.1"
@@ -11501,28 +11520,6 @@ __metadata:
     react-dom:
       optional: true
   checksum: 10/0a924c99e4dbaca70a23312102ec94baa084bb3f62309172ded8ddb25830319c8d5c267d6524258268b85fcfed6317c7acfb77824b58167f32a0ecdb4c3d226d
-  languageName: node
-  linkType: hard
-
-"framer-motion@npm:^12.43.0":
-  version: 12.43.0
-  resolution: "framer-motion@npm:12.43.0"
-  dependencies:
-    motion-dom: "npm:^12.43.0"
-    motion-utils: "npm:^12.39.0"
-    tslib: "npm:^2.4.0"
-  peerDependencies:
-    "@emotion/is-prop-valid": "*"
-    react: ^18.0.0 || ^19.0.0
-    react-dom: ^18.0.0 || ^19.0.0
-  peerDependenciesMeta:
-    "@emotion/is-prop-valid":
-      optional: true
-    react:
-      optional: true
-    react-dom:
-      optional: true
-  checksum: 10/c8013cae9f1eec14af4fa769c6589a3af08ad7b4e7e0e9b67010d4a75ca12c347b8c735750ba798f6c5df09251e4c1f60c7650d24fb6fddc6328d022cdd7f11d
   languageName: node
   linkType: hard
 
@@ -16395,6 +16392,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"motion-dom@npm:14.6.0":
+  version: 14.6.0
+  resolution: "motion-dom@npm:14.6.0"
+  dependencies:
+    motion-utils: "npm:14.6.0"
+  checksum: 10/471043ee0f71a38cf0c234f59c4ddfd3c5e31573f36d3e4d2e056ceb4d0b7b36503b3640859318201923def9c67863f7ef9ff1c2948d1230e9b04c809c58517b
+  languageName: node
+  linkType: hard
+
 "motion-dom@npm:14.7.1":
   version: 14.7.1
   resolution: "motion-dom@npm:14.7.1"
@@ -16404,12 +16410,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"motion-dom@npm:^12.43.0":
-  version: 12.43.0
-  resolution: "motion-dom@npm:12.43.0"
-  dependencies:
-    motion-utils: "npm:^12.39.0"
-  checksum: 10/ac5f7164b77e317f265bf1382156e4a106a1091b442dc1c546f9b565c119baa9e139abec2c2c55ad710ad9d69c02c1c8b96a6932b1904726b64137e7c443f82d
+"motion-utils@npm:14.6.0":
+  version: 14.6.0
+  resolution: "motion-utils@npm:14.6.0"
+  checksum: 10/00906611928721441d05324230ce2a9d40bfa0c4dc70c50f222795d4418fc0865e810fea2d494e4e191bd10574894159cd1534d7c015e7f7b1fdf6d7c171c654
   languageName: node
   linkType: hard
 
@@ -16420,31 +16424,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"motion-utils@npm:^12.39.0":
-  version: 12.39.0
-  resolution: "motion-utils@npm:12.39.0"
-  checksum: 10/5aa2972bf38c44e44e0a39a70202ce69d585d88d28b37975ca0849756b8614e28d5ebd263ed806e94886b1fe684ce28ee630c4556c465581eaa6dca420249486
-  languageName: node
-  linkType: hard
-
-"motion@npm:12.43.0":
-  version: 12.43.0
-  resolution: "motion@npm:12.43.0"
+"motion@npm:14.6.0":
+  version: 14.6.0
+  resolution: "motion@npm:14.6.0"
   dependencies:
-    framer-motion: "npm:^12.43.0"
+    framer-motion: "npm:14.6.0"
     tslib: "npm:^2.4.0"
   peerDependencies:
-    "@emotion/is-prop-valid": "*"
     react: ^18.0.0 || ^19.0.0
     react-dom: ^18.0.0 || ^19.0.0
   peerDependenciesMeta:
-    "@emotion/is-prop-valid":
-      optional: true
     react:
       optional: true
     react-dom:
       optional: true
-  checksum: 10/3c37060bd3dd5ce8ed19adf46990e3fa10c9dd4dd70b1e3d83fd6d382ca33d2912a13ae51a4459410393039794927d07669ad6f1f8da215dfdf6cd31d5e545d1
+  checksum: 10/c45d9e5220726509e483e25a0ee5ec2a9ceb8d35f11c0e8a0a2696677ecd45cd6441c335c494082d663cf5a056efe7a80741707b614bdc906293a57eb44f0b64
   languageName: node
   linkType: hard
 
