@@ -1530,7 +1530,7 @@ __metadata:
     fumadocs-mdx: "npm:15.4.10"
     fumadocs-ui: "npm:16.17.8"
     gh-pages: "npm:6.3.0"
-    lucide-react: "npm:0.577.0"
+    lucide-react: "npm:1.61.0"
     next: "npm:16.4.3"
     next-themes: "npm:0.4.6"
     postcss: "npm:^8.5.25"
@@ -15368,12 +15368,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lucide-react@npm:0.577.0":
-  version: 0.577.0
-  resolution: "lucide-react@npm:0.577.0"
+"lucide-react@npm:1.61.0":
+  version: 1.61.0
+  resolution: "lucide-react@npm:1.61.0"
   peerDependencies:
+    "@types/react": "*"
     react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 10/dcc834b83ff2b3fca4898672ead3ac3f6316c4c391a4ccfc94e5fdd4a08e834ab2d80de7503e3bc9f6fce8333d446c7263cfb5f6f4fc54b5f7569c4e53340e47
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10/94967ade6a5ed65e12606558411caa7de6c8318a024a52d311c90dd7c93cfc7fd8d5eabcba546485ff2f1692218e9a725702418a7307e54604cf699f1bd7d630
   languageName: node
   linkType: hard
 
