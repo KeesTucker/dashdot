@@ -18,7 +18,12 @@ RUN \
     pciutils \
     lm-sensors \
     speedtest-cli \
+    libcap2-bin \
     intel-gpu-tools &&\
+  # intel_gpu_top reads the i915 PMU, which needs CAP_PERFMON. Docker doesn't
+  # pass added caps to a non-root user, so the binary carries it; the
+  # container still needs `cap_add: PERFMON`, or exec fails.
+  setcap cap_perfmon=ep /usr/bin/intel_gpu_top &&\
   curl -fsSL https://deb.nodesource.com/setup_20.x | bash - &&\
   apt-get install -y nodejs &&\
   corepack enable &&\
