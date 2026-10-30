@@ -1,4 +1,9 @@
 <!-- markdownlint-disable -->
+> [!IMPORTANT]
+> This fork is archived. Its successor is **[dash-comma](https://github.com/KeesTucker/dash-comma)**: the same API and `DASHDOT_*` settings, rewritten in Go, with one image for NVIDIA, AMD and Intel GPUs. To move over, swap `ghcr.io/keestucker/dashdot` for `ghcr.io/keestucker/dash-comma` in your compose file.
+>
+> For the original project, see [MauriceNino/dashdot](https://github.com/MauriceNino/dashdot).
+
 <h1>
   <img src=".github/images/banner_muted.png" alt="dash. - a modern server dashboard">
 </h1>
